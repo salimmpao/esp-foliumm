@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_286668f1a79e8c813cc1974d57a0ef56 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_286668f1a79e8c813cc1974d57a0ef56" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_286668f1a79e8c813cc1974d57a0ef56 = L.map(
+                "map_286668f1a79e8c813cc1974d57a0ef56",
+                {
+                    center: [0.21198152653198124, 37.76945972031056],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dbea2d8bdd5ce3ea9c376c49a0353f81 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_dbea2d8bdd5ce3ea9c376c49a0353f81.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var tile_layer_71f0d9556c4c135ffc6e6c55fccc9bc5 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_71f0d9556c4c135ffc6e6c55fccc9bc5.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var tile_layer_70c8350d1532e2641435212585b72e2b = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_70c8350d1532e2641435212585b72e2b.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var tile_layer_948b1571213655384421d1a22542300e = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_948b1571213655384421d1a22542300e.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var tile_layer_a3fa7d0c32f79cdf5524bc62a73a540f = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a3fa7d0c32f79cdf5524bc62a73a540f.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var tile_layer_baf2598460952b033846d2cf2440cb89 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_baf2598460952b033846d2cf2440cb89.addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+            var layer_control_91d97511961302b90a68145f397fadc2_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_dbea2d8bdd5ce3ea9c376c49a0353f81,
+                },
+                overlays :  {
+                    "Esri Satellite" : tile_layer_71f0d9556c4c135ffc6e6c55fccc9bc5,
+                    "Google Satellite" : tile_layer_baf2598460952b033846d2cf2440cb89,
+                    "Google Terrain" : tile_layer_948b1571213655384421d1a22542300e,
+                },
+            };
+            let layer_control_91d97511961302b90a68145f397fadc2 = L.control.layers(
+                layer_control_91d97511961302b90a68145f397fadc2_layers.base_layers,
+                layer_control_91d97511961302b90a68145f397fadc2_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+
+        
+    
+            var marker_635429c1624ebdb477083220da788980 = L.marker(
+                [-0.951700725, 36.81924],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_bd03ab313e25023b6b77ed5b8ebe9b0f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_408b1075a37139208a3737dfd0b45dab = $(`<div id="html_408b1075a37139208a3737dfd0b45dab" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Gittwe <b>County: </b>Kiambu <b>Constituency: <b/>Gatundu South</div>`)[0];
+                popup_bd03ab313e25023b6b77ed5b8ebe9b0f.setContent(html_408b1075a37139208a3737dfd0b45dab);
+            
+        
+
+        marker_635429c1624ebdb477083220da788980.bindPopup(popup_bd03ab313e25023b6b77ed5b8ebe9b0f)
+        ;
+
+        
+    
+    
+            var marker_43811c0e1f5e64897a771deda8400311 = L.marker(
+                [-0.863924237, 34.76285],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_27714046e8f36e92a5eb722b9dae302c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_700cc7f33267cf2648025cecce94549f = $(`<div id="html_700cc7f33267cf2648025cecce94549f" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mogonga <b>County: </b>Kisii <b>Constituency: <b/>Boomachoge</div>`)[0];
+                popup_27714046e8f36e92a5eb722b9dae302c.setContent(html_700cc7f33267cf2648025cecce94549f);
+            
+        
+
+        marker_43811c0e1f5e64897a771deda8400311.bindPopup(popup_27714046e8f36e92a5eb722b9dae302c)
+        ;
+
+        
+    
+    
+            var marker_8f7ccdb07b73c23afb730a50439c6420 = L.marker(
+                [-1.007048427, 34.88033],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_2b7be0c91e6cb55d49f9e495e2e0d8bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ba6ec8bdc682fd4a5277784e72aadc3 = $(`<div id="html_9ba6ec8bdc682fd4a5277784e72aadc3" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kilgoris <b>County: </b>Narok <b>Constituency: <b/>Kilgoris</div>`)[0];
+                popup_2b7be0c91e6cb55d49f9e495e2e0d8bd.setContent(html_9ba6ec8bdc682fd4a5277784e72aadc3);
+            
+        
+
+        marker_8f7ccdb07b73c23afb730a50439c6420.bindPopup(popup_2b7be0c91e6cb55d49f9e495e2e0d8bd)
+        ;
+
+        
+    
+    
+            var marker_e7e42330499f658586bfd8593e6ab41c = L.marker(
+                [0.081269075, 34.63884],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_1389ebc904fceb11afac624663aa7130 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f5c5f63cb7b6ffb790c0e949ed3e60b = $(`<div id="html_2f5c5f63cb7b6ffb790c0e949ed3e60b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Esibuye <b>County: </b>Vihiga <b>Constituency: <b/>Emuhaya</div>`)[0];
+                popup_1389ebc904fceb11afac624663aa7130.setContent(html_2f5c5f63cb7b6ffb790c0e949ed3e60b);
+            
+        
+
+        marker_e7e42330499f658586bfd8593e6ab41c.bindPopup(popup_1389ebc904fceb11afac624663aa7130)
+        ;
+
+        
+    
+    
+            var marker_243231da13ce2945100f8fb8b79ec134 = L.marker(
+                [0.206504225, 34.4905],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_a5216b28ef0f3f461d4fbc7229a415da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0cb308899f0278b456c992f708ff34ca = $(`<div id="html_0cb308899f0278b456c992f708ff34ca" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Butere <b>County: </b>Kakamega <b>Constituency: <b/>Butere</div>`)[0];
+                popup_a5216b28ef0f3f461d4fbc7229a415da.setContent(html_0cb308899f0278b456c992f708ff34ca);
+            
+        
+
+        marker_243231da13ce2945100f8fb8b79ec134.bindPopup(popup_a5216b28ef0f3f461d4fbc7229a415da)
+        ;
+
+        
+    
+    
+            var marker_2581815330e76bcb9f544b0a1b58a9a6 = L.marker(
+                [0.651148018, 34.87612],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_c41729c784e5e5b056f7f388514c07a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac392a26aefbdb11abfe1197bb63feba = $(`<div id="html_ac392a26aefbdb11abfe1197bb63feba" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Chekalini <b>County: </b>Kakamega <b>Constituency: <b/>Lugari</div>`)[0];
+                popup_c41729c784e5e5b056f7f388514c07a5.setContent(html_ac392a26aefbdb11abfe1197bb63feba);
+            
+        
+
+        marker_2581815330e76bcb9f544b0a1b58a9a6.bindPopup(popup_c41729c784e5e5b056f7f388514c07a5)
+        ;
+
+        
+    
+    
+            var marker_c3e3583b86d47086d87b832249922a3a = L.marker(
+                [0.223312029, 34.02172],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_c04013c326d1325aa466fe2f0b635793 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c91a18d4e6f2686538074d2fd46341f1 = $(`<div id="html_c91a18d4e6f2686538074d2fd46341f1" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Sio Port <b>County: </b>Busia <b>Constituency: <b/>Funyula</div>`)[0];
+                popup_c04013c326d1325aa466fe2f0b635793.setContent(html_c91a18d4e6f2686538074d2fd46341f1);
+            
+        
+
+        marker_c3e3583b86d47086d87b832249922a3a.bindPopup(popup_c04013c326d1325aa466fe2f0b635793)
+        ;
+
+        
+    
+    
+            var marker_537b49bbcfb3b95e41e918d2ffb38291 = L.marker(
+                [-1.45555039, 37.24949],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_7f24185befb8677ca9ac131c47f60421 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1b341d11245fcf2f5446b62f3a624c2 = $(`<div id="html_e1b341d11245fcf2f5446b62f3a624c2" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mutituni <b>County: </b>Machakos <b>Constituency: <b/>Machakos Town</div>`)[0];
+                popup_7f24185befb8677ca9ac131c47f60421.setContent(html_e1b341d11245fcf2f5446b62f3a624c2);
+            
+        
+
+        marker_537b49bbcfb3b95e41e918d2ffb38291.bindPopup(popup_7f24185befb8677ca9ac131c47f60421)
+        ;
+
+        
+    
+    
+            var marker_8fe0540078593f9a596ec1e71276c3a1 = L.marker(
+                [-0.38927275, 37.46363],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_5e00007e7f1248086c5ce3907e3991d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d47f6732064b48e31d6fb4a65fa88003 = $(`<div id="html_d47f6732064b48e31d6fb4a65fa88003" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mbuvori <b>County: </b>Embu County <b>Constituency: <b/>Manyatta</div>`)[0];
+                popup_5e00007e7f1248086c5ce3907e3991d7.setContent(html_d47f6732064b48e31d6fb4a65fa88003);
+            
+        
+
+        marker_8fe0540078593f9a596ec1e71276c3a1.bindPopup(popup_5e00007e7f1248086c5ce3907e3991d7)
+        ;
+
+        
+    
+    
+            var marker_fa4fb639a82d2b88b714f0a202a880d3 = L.marker(
+                [-0.604347689, 36.99162],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_72b90fff8b1e36840b7eabc74db7c2ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0af3e7000e260fb7e600741e2daa7df3 = $(`<div id="html_0af3e7000e260fb7e600741e2daa7df3" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kamacharia <b>County: </b>Muranga <b>Constituency: <b/>Mathioya</div>`)[0];
+                popup_72b90fff8b1e36840b7eabc74db7c2ad.setContent(html_0af3e7000e260fb7e600741e2daa7df3);
+            
+        
+
+        marker_fa4fb639a82d2b88b714f0a202a880d3.bindPopup(popup_72b90fff8b1e36840b7eabc74db7c2ad)
+        ;
+
+        
+    
+    
+            var marker_6f01ee5e2c834b4bd9c9526fd014fbc0 = L.marker(
+                [0.295988824, 35.32649],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_6857e0a8a9463a28a48d8d360f3fe62c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fcf4b1f2918a05135037945a7de569c1 = $(`<div id="html_fcf4b1f2918a05135037945a7de569c1" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kesses <b>County: </b>Uasin Gishu <b>Constituency: <b/>Kesses</div>`)[0];
+                popup_6857e0a8a9463a28a48d8d360f3fe62c.setContent(html_fcf4b1f2918a05135037945a7de569c1);
+            
+        
+
+        marker_6f01ee5e2c834b4bd9c9526fd014fbc0.bindPopup(popup_6857e0a8a9463a28a48d8d360f3fe62c)
+        ;
+
+        
+    
+    
+            var marker_bcd8734b678d13e68ae33e6f8efbc168 = L.marker(
+                [0.999322654, 35.05879],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_b008482126ff84686c9fc0d2eb537dee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4484aa91ae7f99398fce1c1b287716e3 = $(`<div id="html_4484aa91ae7f99398fce1c1b287716e3" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Bikeke <b>County: </b>Trans Nzoia <b>Constituency: <b/>Kiminini</div>`)[0];
+                popup_b008482126ff84686c9fc0d2eb537dee.setContent(html_4484aa91ae7f99398fce1c1b287716e3);
+            
+        
+
+        marker_bcd8734b678d13e68ae33e6f8efbc168.bindPopup(popup_b008482126ff84686c9fc0d2eb537dee)
+        ;
+
+        
+    
+    
+            var marker_5cbf437adc486289bac7361e9e5f6437 = L.marker(
+                [1.029210638, 35.12168],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_b28cc2b61a79cdff7e67808a96470b32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba096d8b5132697e559fcf15223efe74 = $(`<div id="html_ba096d8b5132697e559fcf15223efe74" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Sibanga <b>County: </b>Trans Nzoia <b>Constituency: <b/>Cheragany</div>`)[0];
+                popup_b28cc2b61a79cdff7e67808a96470b32.setContent(html_ba096d8b5132697e559fcf15223efe74);
+            
+        
+
+        marker_5cbf437adc486289bac7361e9e5f6437.bindPopup(popup_b28cc2b61a79cdff7e67808a96470b32)
+        ;
+
+        
+    
+    
+            var marker_4ffbab9bd379eb73921ac90d3f70e5be = L.marker(
+                [0.415197477, 35.02008],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_738add1e369b114884b1840d4e4a9d54 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9614aa158021a7a54e9fdacd88344ed = $(`<div id="html_b9614aa158021a7a54e9fdacd88344ed" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kaiboi <b>County: </b>Nandi <b>Constituency: <b/>Mosop</div>`)[0];
+                popup_738add1e369b114884b1840d4e4a9d54.setContent(html_b9614aa158021a7a54e9fdacd88344ed);
+            
+        
+
+        marker_4ffbab9bd379eb73921ac90d3f70e5be.bindPopup(popup_738add1e369b114884b1840d4e4a9d54)
+        ;
+
+        
+    
+    
+            var marker_c9949075d99f0fdbd4f24e3f515188b5 = L.marker(
+                [-1.769884429, 37.55249],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_e80908bd7bd0d49dbd1914f7482b9b18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34ccfa016021d563436f0414297efb2a = $(`<div id="html_34ccfa016021d563436f0414297efb2a" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kilala <b>County: </b>Makueni <b>Constituency: <b/>Kaiti</div>`)[0];
+                popup_e80908bd7bd0d49dbd1914f7482b9b18.setContent(html_34ccfa016021d563436f0414297efb2a);
+            
+        
+
+        marker_c9949075d99f0fdbd4f24e3f515188b5.bindPopup(popup_e80908bd7bd0d49dbd1914f7482b9b18)
+        ;
+
+        
+    
+    
+            var marker_d8f8c5af47e6d5a27081dea33e8884d2 = L.marker(
+                [-0.060146647, 36.52931],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_7e5285c9c2596893d1860a14f4bf50a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_567fbf6adb2d37fdb8dca96c1afef115 = $(`<div id="html_567fbf6adb2d37fdb8dca96c1afef115" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ndaragwa <b>County: </b>Nyandarua <b>Constituency: <b/>Ndaragwa</div>`)[0];
+                popup_7e5285c9c2596893d1860a14f4bf50a4.setContent(html_567fbf6adb2d37fdb8dca96c1afef115);
+            
+        
+
+        marker_d8f8c5af47e6d5a27081dea33e8884d2.bindPopup(popup_7e5285c9c2596893d1860a14f4bf50a4)
+        ;
+
+        
+    
+    
+            var marker_80cc296f72bb5979fe049d1371a4160f = L.marker(
+                [-0.627628512, 35.19829],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d2898d00d4a64a48adc158c23ddb4f0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d0c8732d0fbb3f481cfe64ce8d820ad = $(`<div id="html_3d0c8732d0fbb3f481cfe64ce8d820ad" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kapkalek <b>County: </b>Kericho <b>Constituency: <b/>Belgut</div>`)[0];
+                popup_d2898d00d4a64a48adc158c23ddb4f0a.setContent(html_3d0c8732d0fbb3f481cfe64ce8d820ad);
+            
+        
+
+        marker_80cc296f72bb5979fe049d1371a4160f.bindPopup(popup_d2898d00d4a64a48adc158c23ddb4f0a)
+        ;
+
+        
+    
+    
+            var marker_34e749f65c0ff6448de62ac4a2d1f743 = L.marker(
+                [-0.71086595, 38.07794],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d8e921ece4fadcab3c03af8c26a0e3e7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63a013682b4ae4eec7884547501e061d = $(`<div id="html_63a013682b4ae4eec7884547501e061d" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kamwongo <b>County: </b>Kitui <b>Constituency: <b/>Mwingi North</div>`)[0];
+                popup_d8e921ece4fadcab3c03af8c26a0e3e7.setContent(html_63a013682b4ae4eec7884547501e061d);
+            
+        
+
+        marker_34e749f65c0ff6448de62ac4a2d1f743.bindPopup(popup_d8e921ece4fadcab3c03af8c26a0e3e7)
+        ;
+
+        
+    
+    
+            var marker_5d62cf7865e88cd1790d675dc37b7eeb = L.marker(
+                [-0.824795341, 37.91421],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_690fd4b6056d324e279346ac72ac78bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c83567e52603e8d7d835c7f20325b816 = $(`<div id="html_c83567e52603e8d7d835c7f20325b816" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kakongo <b>County: </b>Kitui <b>Constituency: <b/>Mwingi East</div>`)[0];
+                popup_690fd4b6056d324e279346ac72ac78bf.setContent(html_c83567e52603e8d7d835c7f20325b816);
+            
+        
+
+        marker_5d62cf7865e88cd1790d675dc37b7eeb.bindPopup(popup_690fd4b6056d324e279346ac72ac78bf)
+        ;
+
+        
+    
+    
+            var marker_3de11e285db68529061cce11b87f5808 = L.marker(
+                [-0.116274302, 35.81481],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d63bf03d59f7cda34ca5bd59fff67212 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6de59f5fe7852486913755fa9c4e138f = $(`<div id="html_6de59f5fe7852486913755fa9c4e138f" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Rongai <b>County: </b>Nakuru <b>Constituency: <b/>Rongai</div>`)[0];
+                popup_d63bf03d59f7cda34ca5bd59fff67212.setContent(html_6de59f5fe7852486913755fa9c4e138f);
+            
+        
+
+        marker_3de11e285db68529061cce11b87f5808.bindPopup(popup_d63bf03d59f7cda34ca5bd59fff67212)
+        ;
+
+        
+    
+    
+            var marker_2c1ce7055c569c71e5830f875202aba0 = L.marker(
+                [-0.943397311, 37.01992],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_94f6827e703f331aca505c09309e621e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f640cfe75cb37d9287492e48ddc58fdf = $(`<div id="html_f640cfe75cb37d9287492e48ddc58fdf" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ng'araria <b>County: </b>Muranga <b>Constituency: <b/>Kandara</div>`)[0];
+                popup_94f6827e703f331aca505c09309e621e.setContent(html_f640cfe75cb37d9287492e48ddc58fdf);
+            
+        
+
+        marker_2c1ce7055c569c71e5830f875202aba0.bindPopup(popup_94f6827e703f331aca505c09309e621e)
+        ;
+
+        
+    
+    
+            var marker_6837f98dc25d86626c0e1d24e95631ce = L.marker(
+                [-0.960622511, 36.9933],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_b641a20127a856f190e93c51a29af476 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d506ce8410f5ca50f0e92c5911016ef9 = $(`<div id="html_d506ce8410f5ca50f0e92c5911016ef9" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Gatunyu <b>County: </b>Muranga <b>Constituency: <b/>Gatanga</div>`)[0];
+                popup_b641a20127a856f190e93c51a29af476.setContent(html_d506ce8410f5ca50f0e92c5911016ef9);
+            
+        
+
+        marker_6837f98dc25d86626c0e1d24e95631ce.bindPopup(popup_b641a20127a856f190e93c51a29af476)
+        ;
+
+        
+    
+    
+            var marker_729dc33f1d2eac80701e3fb234633460 = L.marker(
+                [-0.625082473, 37.25482],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_1c237f42d527ceebc1a92c98353ec792 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac8d29ba0c9d355fa6daeceb61d326aa = $(`<div id="html_ac8d29ba0c9d355fa6daeceb61d326aa" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kagio <b>County: </b>Kirinyaga County <b>Constituency: <b/>Ndia</div>`)[0];
+                popup_1c237f42d527ceebc1a92c98353ec792.setContent(html_ac8d29ba0c9d355fa6daeceb61d326aa);
+            
+        
+
+        marker_729dc33f1d2eac80701e3fb234633460.bindPopup(popup_1c237f42d527ceebc1a92c98353ec792)
+        ;
+
+        
+    
+    
+            var marker_2eb138c4c286622d6623566a3189c0f3 = L.marker(
+                [-1.499609724, 40.03419],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d44a24ac9caef21a01a1f03051af04a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43c08f7cb15df00b71ead6aff6e58405 = $(`<div id="html_43c08f7cb15df00b71ead6aff6e58405" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Hola <b>County: </b>Tana River County <b>Constituency: <b/>Galole</div>`)[0];
+                popup_d44a24ac9caef21a01a1f03051af04a4.setContent(html_43c08f7cb15df00b71ead6aff6e58405);
+            
+        
+
+        marker_2eb138c4c286622d6623566a3189c0f3.bindPopup(popup_d44a24ac9caef21a01a1f03051af04a4)
+        ;
+
+        
+    
+    
+            var marker_0ed01fc41ca4e29687c229a15642b398 = L.marker(
+                [-4.136798278, 39.31829],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_fd56414bbda49e0f67e3da96fdf631e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de421738c7557801c5432c86d5869adc = $(`<div id="html_de421738c7557801c5432c86d5869adc" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kinango <b>County: </b>Kwale <b>Constituency: <b/>Kinango</div>`)[0];
+                popup_fd56414bbda49e0f67e3da96fdf631e2.setContent(html_de421738c7557801c5432c86d5869adc);
+            
+        
+
+        marker_0ed01fc41ca4e29687c229a15642b398.bindPopup(popup_fd56414bbda49e0f67e3da96fdf631e2)
+        ;
+
+        
+    
+    
+            var marker_d80f27c7f277b24e46505fd22ac274c4 = L.marker(
+                [-4.551866566, 39.12448],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_30917d1b42c3a3727202c0dfd93039d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93b72440b621c2c12eafac53dc19ca37 = $(`<div id="html_93b72440b621c2c12eafac53dc19ca37" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Lunga Lunga <b>County: </b>Kwale <b>Constituency: <b/>Lunga Lunga</div>`)[0];
+                popup_30917d1b42c3a3727202c0dfd93039d3.setContent(html_93b72440b621c2c12eafac53dc19ca37);
+            
+        
+
+        marker_d80f27c7f277b24e46505fd22ac274c4.bindPopup(popup_30917d1b42c3a3727202c0dfd93039d3)
+        ;
+
+        
+    
+    
+            var marker_4ab147c7b50962aa5a285116d3c8a9fe = L.marker(
+                [-0.656160957, 34.66927],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_ea91db2ae7528fadb054bbbc9dd15bac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b19deb439611a6debfd1dafa9eac899a = $(`<div id="html_b19deb439611a6debfd1dafa9eac899a" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Riana <b>County: </b>Kisii <b>Constituency: <b/>Bonchari</div>`)[0];
+                popup_ea91db2ae7528fadb054bbbc9dd15bac.setContent(html_b19deb439611a6debfd1dafa9eac899a);
+            
+        
+
+        marker_4ab147c7b50962aa5a285116d3c8a9fe.bindPopup(popup_ea91db2ae7528fadb054bbbc9dd15bac)
+        ;
+
+        
+    
+    
+            var marker_ee22e832cfeceb3f59880037a35548c8 = L.marker(
+                [0.307771224, 34.28383],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d7a076593eb7b6ea67af1a5add806af3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d6eb1a1e62a559f8b2877368b6af006 = $(`<div id="html_9d6eb1a1e62a559f8b2877368b6af006" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Bar Ober <b>County: </b>Siaya <b>Constituency: <b/>Ugenya</div>`)[0];
+                popup_d7a076593eb7b6ea67af1a5add806af3.setContent(html_9d6eb1a1e62a559f8b2877368b6af006);
+            
+        
+
+        marker_ee22e832cfeceb3f59880037a35548c8.bindPopup(popup_d7a076593eb7b6ea67af1a5add806af3)
+        ;
+
+        
+    
+    
+            var marker_c036b6de6baeac5457daa1937ef954e2 = L.marker(
+                [-1.07086527, 34.4754],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_6266706f9eabe08cb70264fd760c99a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14b4c8c6c62e5df2fd813eba4bcec1e8 = $(`<div id="html_14b4c8c6c62e5df2fd813eba4bcec1e8" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Sibuoche <b>County: </b>Migori <b>Constituency: <b/>Uriri</div>`)[0];
+                popup_6266706f9eabe08cb70264fd760c99a7.setContent(html_14b4c8c6c62e5df2fd813eba4bcec1e8);
+            
+        
+
+        marker_c036b6de6baeac5457daa1937ef954e2.bindPopup(popup_6266706f9eabe08cb70264fd760c99a7)
+        ;
+
+        
+    
+    
+            var marker_001112fecb20c5ceb47e6b200e5ae381 = L.marker(
+                [-1.122415502, 34.49168],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_aaca2ec3376c6ca6c11a25ebdc0dc443 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a64b7e57b33be9e2c25b2d1b14c7b7cf = $(`<div id="html_a64b7e57b33be9e2c25b2d1b14c7b7cf" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Nyabohanse <b>County: </b>Migori <b>Constituency: <b/>Kuria West</div>`)[0];
+                popup_aaca2ec3376c6ca6c11a25ebdc0dc443.setContent(html_a64b7e57b33be9e2c25b2d1b14c7b7cf);
+            
+        
+
+        marker_001112fecb20c5ceb47e6b200e5ae381.bindPopup(popup_aaca2ec3376c6ca6c11a25ebdc0dc443)
+        ;
+
+        
+    
+    
+            var marker_9f9560a60450f5ac461c68aa7e2f0bf4 = L.marker(
+                [1.436400706, 35.35918],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_1ba8a03a441e05fc09a18a306606ec66 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_005473bf8e4c51e7df8b10e270e10cf9 = $(`<div id="html_005473bf8e4c51e7df8b10e270e10cf9" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ortum <b>County: </b>West Pokot <b>Constituency: <b/>Chepararia</div>`)[0];
+                popup_1ba8a03a441e05fc09a18a306606ec66.setContent(html_005473bf8e4c51e7df8b10e270e10cf9);
+            
+        
+
+        marker_9f9560a60450f5ac461c68aa7e2f0bf4.bindPopup(popup_1ba8a03a441e05fc09a18a306606ec66)
+        ;
+
+        
+    
+    
+            var marker_438806498d92a26f78cd2e318db5c4b0 = L.marker(
+                [-1.662467551, 37.44692],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_cd821ef171ca12b6de95adca6a976d5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2b7fa4dca9efc8809d5a1008994917b = $(`<div id="html_c2b7fa4dca9efc8809d5a1008994917b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kikima <b>County: </b>Makueni <b>Constituency: <b/>Mbooni</div>`)[0];
+                popup_cd821ef171ca12b6de95adca6a976d5b.setContent(html_c2b7fa4dca9efc8809d5a1008994917b);
+            
+        
+
+        marker_438806498d92a26f78cd2e318db5c4b0.bindPopup(popup_cd821ef171ca12b6de95adca6a976d5b)
+        ;
+
+        
+    
+    
+            var marker_61db680ec6cc67457bebb4d8467c2071 = L.marker(
+                [-0.498308347, 36.32163],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d2c39e77b1652756134ca337d797e2ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_986ccf8bd5babc0d338e8254d91320c2 = $(`<div id="html_986ccf8bd5babc0d338e8254d91320c2" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Gilgil <b>County: </b>Nakuru <b>Constituency: <b/>Nakuru Town East</div>`)[0];
+                popup_d2c39e77b1652756134ca337d797e2ee.setContent(html_986ccf8bd5babc0d338e8254d91320c2);
+            
+        
+
+        marker_61db680ec6cc67457bebb4d8467c2071.bindPopup(popup_d2c39e77b1652756134ca337d797e2ee)
+        ;
+
+        
+    
+    
+            var marker_b88883dba02055d45ef2b0ef525dea36 = L.marker(
+                [-0.412440956, 36.15016],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d45f003b063f07fdc7161d52793181df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f75a62a34d45ccf8c73411853b26ced = $(`<div id="html_2f75a62a34d45ccf8c73411853b26ced" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mzee wa Nyama <b>County: </b>Nakuru <b>Constituency: <b/>nan</div>`)[0];
+                popup_d45f003b063f07fdc7161d52793181df.setContent(html_2f75a62a34d45ccf8c73411853b26ced);
+            
+        
+
+        marker_b88883dba02055d45ef2b0ef525dea36.bindPopup(popup_d45f003b063f07fdc7161d52793181df)
+        ;
+
+        
+    
+    
+            var marker_a37c8e8ac6eebd75ac44ea525b88e74b = L.marker(
+                [-0.433135245, 35.97342],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_0fca939d07f8a89f7a771ee2a0a6fa63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51c91b2b802e1b2e81d1ab48801bb84a = $(`<div id="html_51c91b2b802e1b2e81d1ab48801bb84a" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kihingo <b>County: </b>Nakuru <b>Constituency: <b/>Njoro</div>`)[0];
+                popup_0fca939d07f8a89f7a771ee2a0a6fa63.setContent(html_51c91b2b802e1b2e81d1ab48801bb84a);
+            
+        
+
+        marker_a37c8e8ac6eebd75ac44ea525b88e74b.bindPopup(popup_0fca939d07f8a89f7a771ee2a0a6fa63)
+        ;
+
+        
+    
+    
+            var marker_36d5b253c1316319cd4d3f5f4212d1bd = L.marker(
+                [-0.282671969, 35.7588401],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_21263d4c572f81f3d2dcc6b53eed42a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0524de73861c0163365813330564b4c = $(`<div id="html_e0524de73861c0163365813330564b4c" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Turi <b>County: </b>Nakuru <b>Constituency: <b/>Molo</div>`)[0];
+                popup_21263d4c572f81f3d2dcc6b53eed42a2.setContent(html_e0524de73861c0163365813330564b4c);
+            
+        
+
+        marker_36d5b253c1316319cd4d3f5f4212d1bd.bindPopup(popup_21263d4c572f81f3d2dcc6b53eed42a2)
+        ;
+
+        
+    
+    
+            var marker_7ad014e4e1e432592cad56d59a014567 = L.marker(
+                [-0.496483901, 37.45787744],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_43299c2130ece013fd1826fa37e1441b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7631d1ccbcfd19a67c6099fecbc3c8b = $(`<div id="html_d7631d1ccbcfd19a67c6099fecbc3c8b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kangaru <b>County: </b>Embu County <b>Constituency: <b/>Manyatta</div>`)[0];
+                popup_43299c2130ece013fd1826fa37e1441b.setContent(html_d7631d1ccbcfd19a67c6099fecbc3c8b);
+            
+        
+
+        marker_7ad014e4e1e432592cad56d59a014567.bindPopup(popup_43299c2130ece013fd1826fa37e1441b)
+        ;
+
+        
+    
+    
+            var marker_1bd08dd219b2413d5511d6d29aa48a7d = L.marker(
+                [2.270924382, 35.00830616],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_f4722bed4116e02d9f97b69c837339f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abf46e0af44ef9676166b943187b423b = $(`<div id="html_abf46e0af44ef9676166b943187b423b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Allale <b>County: </b>West Pokot <b>Constituency: <b/>Kacheliba</div>`)[0];
+                popup_f4722bed4116e02d9f97b69c837339f4.setContent(html_abf46e0af44ef9676166b943187b423b);
+            
+        
+
+        marker_1bd08dd219b2413d5511d6d29aa48a7d.bindPopup(popup_f4722bed4116e02d9f97b69c837339f4)
+        ;
+
+        
+    
+    
+            var marker_0fa1b6657a5de468a11f368e4dbd127c = L.marker(
+                [-0.919486446, 35.29922003],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_489b2df00cf39ecbc72951f4efb813b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cbf1adefd412c7261b2c75b1a7d061b2 = $(`<div id="html_cbf1adefd412c7261b2c75b1a7d061b2" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Sigor <b>County: </b>West Pokot <b>Constituency: <b/>Sigor</div>`)[0];
+                popup_489b2df00cf39ecbc72951f4efb813b1.setContent(html_cbf1adefd412c7261b2c75b1a7d061b2);
+            
+        
+
+        marker_0fa1b6657a5de468a11f368e4dbd127c.bindPopup(popup_489b2df00cf39ecbc72951f4efb813b1)
+        ;
+
+        
+    
+    
+            var marker_12cf6c47e9f771ebbeffefd40fe49890 = L.marker(
+                [-0.073051728, 34.66280752],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_4502be240f3238b0109ee211bd3157da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_520003fd302cc77ce940eb92f0b01c5f = $(`<div id="html_520003fd302cc77ce940eb92f0b01c5f" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kisiani <b>County: </b>Kisumu <b>Constituency: <b/>Kisumu West</div>`)[0];
+                popup_4502be240f3238b0109ee211bd3157da.setContent(html_520003fd302cc77ce940eb92f0b01c5f);
+            
+        
+
+        marker_12cf6c47e9f771ebbeffefd40fe49890.bindPopup(popup_4502be240f3238b0109ee211bd3157da)
+        ;
+
+        
+    
+    
+            var marker_b14ae1e4b0d8356d0ba8e0f68edc3ec0 = L.marker(
+                [-0.155832015, 35.19778155],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_f27467445cbac1e776930835e3abe0d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_200835311b18dbc631424905e0d406f0 = $(`<div id="html_200835311b18dbc631424905e0d406f0" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Muhoroni <b>County: </b>Kisumu <b>Constituency: <b/>Muhoroni</div>`)[0];
+                popup_f27467445cbac1e776930835e3abe0d4.setContent(html_200835311b18dbc631424905e0d406f0);
+            
+        
+
+        marker_b14ae1e4b0d8356d0ba8e0f68edc3ec0.bindPopup(popup_f27467445cbac1e776930835e3abe0d4)
+        ;
+
+        
+    
+    
+            var marker_8fda0c4697f435ba0b1cfcf91a77a0b2 = L.marker(
+                [-0.721542537, 37.16092619],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_703ccbc99de59a2ad892f3cee6c09174 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4ff5211d22c398a86d08538ce8ce967 = $(`<div id="html_f4ff5211d22c398a86d08538ce8ce967" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Marigiti <b>County: </b>Nyeri <b>Constituency: <b/>Mathira</div>`)[0];
+                popup_703ccbc99de59a2ad892f3cee6c09174.setContent(html_f4ff5211d22c398a86d08538ce8ce967);
+            
+        
+
+        marker_8fda0c4697f435ba0b1cfcf91a77a0b2.bindPopup(popup_703ccbc99de59a2ad892f3cee6c09174)
+        ;
+
+        
+    
+    
+            var marker_df54c60aada06c124005f973735fe385 = L.marker(
+                [-0.481731115, 37.12454761],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_ca6deb055b412301f32906c3464a7feb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9181351ffd0c3abd54f28d326eea6e0f = $(`<div id="html_9181351ffd0c3abd54f28d326eea6e0f" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Karatina <b>County: </b>Nyeri <b>Constituency: <b/>nan</div>`)[0];
+                popup_ca6deb055b412301f32906c3464a7feb.setContent(html_9181351ffd0c3abd54f28d326eea6e0f);
+            
+        
+
+        marker_df54c60aada06c124005f973735fe385.bindPopup(popup_ca6deb055b412301f32906c3464a7feb)
+        ;
+
+        
+    
+    
+            var marker_088288ddbcfdd8d7d101ef6e5745a4e6 = L.marker(
+                [-0.626722715, 37.36386255],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_c4e6fd7f3a791af73147a4821c70f90f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35f856db4f0145b2daf3f82c160e3035 = $(`<div id="html_35f856db4f0145b2daf3f82c160e3035" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kimbikimbi <b>County: </b>Kirinyaga County <b>Constituency: <b/>Mwea East</div>`)[0];
+                popup_c4e6fd7f3a791af73147a4821c70f90f.setContent(html_35f856db4f0145b2daf3f82c160e3035);
+            
+        
+
+        marker_088288ddbcfdd8d7d101ef6e5745a4e6.bindPopup(popup_c4e6fd7f3a791af73147a4821c70f90f)
+        ;
+
+        
+    
+    
+            var marker_5dde4e86a54a1c286c5fcf5baed28540 = L.marker(
+                [0.053540662, 37.62842944],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_c179caad1dc9b62ec22174c48cbee5cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1a8fd124ce2f2f7005e975259f8870b = $(`<div id="html_f1a8fd124ce2f2f7005e975259f8870b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kianjai <b>County: </b>Meru <b>Constituency: <b/>Tigania West</div>`)[0];
+                popup_c179caad1dc9b62ec22174c48cbee5cd.setContent(html_f1a8fd124ce2f2f7005e975259f8870b);
+            
+        
+
+        marker_5dde4e86a54a1c286c5fcf5baed28540.bindPopup(popup_c179caad1dc9b62ec22174c48cbee5cd)
+        ;
+
+        
+    
+    
+            var marker_09637a4399087d3bfb481a768af74718 = L.marker(
+                [-0.479355136, 37.5988326],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_edf245a1e514cbcdad67fb9cd3398f10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_884b17918b4362622f15f91d9cdb7c56 = $(`<div id="html_884b17918b4362622f15f91d9cdb7c56" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ugweri <b>County: </b>Embu <b>Constituency: <b/>Runyenjes</div>`)[0];
+                popup_edf245a1e514cbcdad67fb9cd3398f10.setContent(html_884b17918b4362622f15f91d9cdb7c56);
+            
+        
+
+        marker_09637a4399087d3bfb481a768af74718.bindPopup(popup_edf245a1e514cbcdad67fb9cd3398f10)
+        ;
+
+        
+    
+    
+            var marker_ed8944cd5a20af267b673b4b3e066f40 = L.marker(
+                [-0.55961152, 37.05229777],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_bea6704e78021e7881f7ec041919715d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba2ad3e46f3246a1f4f9d394f316bc25 = $(`<div id="html_ba2ad3e46f3246a1f4f9d394f316bc25" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kiahungu <b>County: </b>Nyeri <b>Constituency: <b/>Mukurweini</div>`)[0];
+                popup_bea6704e78021e7881f7ec041919715d.setContent(html_ba2ad3e46f3246a1f4f9d394f316bc25);
+            
+        
+
+        marker_ed8944cd5a20af267b673b4b3e066f40.bindPopup(popup_bea6704e78021e7881f7ec041919715d)
+        ;
+
+        
+    
+    
+            var marker_6741b12ffa30ddbb61d44e4248891c31 = L.marker(
+                [-0.200108703, 36.82052057],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_782c20a4882ab9fcdcc097e49e0aca44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fde38f29dab3a6ef94da61dac616904b = $(`<div id="html_fde38f29dab3a6ef94da61dac616904b" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kiawara <b>County: </b>Nyeri <b>Constituency: <b/>Kieni West</div>`)[0];
+                popup_782c20a4882ab9fcdcc097e49e0aca44.setContent(html_fde38f29dab3a6ef94da61dac616904b);
+            
+        
+
+        marker_6741b12ffa30ddbb61d44e4248891c31.bindPopup(popup_782c20a4882ab9fcdcc097e49e0aca44)
+        ;
+
+        
+    
+    
+            var marker_4424094f1624c603bfce10391b8ba695 = L.marker(
+                [-0.41097458, 36.89174457],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_692c598fe1f0a831728f6f4702a2e24e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af98616f10c9eca2dd199b92c6c74879 = $(`<div id="html_af98616f10c9eca2dd199b92c6c74879" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ihururu <b>County: </b>Nyeri <b>Constituency: <b/>Tetu</div>`)[0];
+                popup_692c598fe1f0a831728f6f4702a2e24e.setContent(html_af98616f10c9eca2dd199b92c6c74879);
+            
+        
+
+        marker_4424094f1624c603bfce10391b8ba695.bindPopup(popup_692c598fe1f0a831728f6f4702a2e24e)
+        ;
+
+        
+    
+    
+            var marker_ccbd3ba50d32eea4da77520f0377e6e1 = L.marker(
+                [3.152647497, 41.1858335],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_2f1e818d01f7d0edd1b6dd17958870de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_112e41803034b3d7d6434cdab2e79389 = $(`<div id="html_112e41803034b3d7d6434cdab2e79389" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Lafey <b>County: </b>Mandera <b>Constituency: <b/>Lafey</div>`)[0];
+                popup_2f1e818d01f7d0edd1b6dd17958870de.setContent(html_112e41803034b3d7d6434cdab2e79389);
+            
+        
+
+        marker_ccbd3ba50d32eea4da77520f0377e6e1.bindPopup(popup_2f1e818d01f7d0edd1b6dd17958870de)
+        ;
+
+        
+    
+    
+            var marker_35f0305c8f2db4b9eae319bd0f74c321 = L.marker(
+                [-0.444021304, 34.91324038],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_3b7f1587666400d57123eead78e1442d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb0087c245ea806a3fe6295e2767641e = $(`<div id="html_eb0087c245ea806a3fe6295e2767641e" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Misambi <b>County: </b>Homabay <b>Constituency: <b/>Kabando Kasipul</div>`)[0];
+                popup_3b7f1587666400d57123eead78e1442d.setContent(html_eb0087c245ea806a3fe6295e2767641e);
+            
+        
+
+        marker_35f0305c8f2db4b9eae319bd0f74c321.bindPopup(popup_3b7f1587666400d57123eead78e1442d)
+        ;
+
+        
+    
+    
+            var marker_538b83538f73c0443bebea59752e5ccf = L.marker(
+                [-1.168851381, 36.66663281],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_be8229ecd8a12dc8937400c1553a4b7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be1cab1dd6e1d0f0a8f8266a6d5e6bfe = $(`<div id="html_be1cab1dd6e1d0f0a8f8266a6d5e6bfe" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ngecha <b>County: </b>Kiambu <b>Constituency: <b/>Limuru</div>`)[0];
+                popup_be8229ecd8a12dc8937400c1553a4b7e.setContent(html_be1cab1dd6e1d0f0a8f8266a6d5e6bfe);
+            
+        
+
+        marker_538b83538f73c0443bebea59752e5ccf.bindPopup(popup_be8229ecd8a12dc8937400c1553a4b7e)
+        ;
+
+        
+    
+    
+            var marker_890d09b245d0ea97f3c1c00841f8a916 = L.marker(
+                [-1.26264062, 36.71868002],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_8edbd0d931a0ece12386840ced7dd351 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1bb37cf7b057066b5b4fcd42f497f64 = $(`<div id="html_d1bb37cf7b057066b5b4fcd42f497f64" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Uthiru <b>County: </b>Kiambu <b>Constituency: <b/>Kikuyu</div>`)[0];
+                popup_8edbd0d931a0ece12386840ced7dd351.setContent(html_d1bb37cf7b057066b5b4fcd42f497f64);
+            
+        
+
+        marker_890d09b245d0ea97f3c1c00841f8a916.bindPopup(popup_8edbd0d931a0ece12386840ced7dd351)
+        ;
+
+        
+    
+    
+            var marker_5817c6c1a22fb165bf12aa68c2e54d34 = L.marker(
+                [0.232290513, 34.69245676],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_caf7573c92009255d937fa061b757dce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_876a3890c41b59ea2bbbc58ddc5bf326 = $(`<div id="html_876a3890c41b59ea2bbbc58ddc5bf326" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Shisese <b>County: </b>Kakamega <b>Constituency: <b/>Ikolomani</div>`)[0];
+                popup_caf7573c92009255d937fa061b757dce.setContent(html_876a3890c41b59ea2bbbc58ddc5bf326);
+            
+        
+
+        marker_5817c6c1a22fb165bf12aa68c2e54d34.bindPopup(popup_caf7573c92009255d937fa061b757dce)
+        ;
+
+        
+    
+    
+            var marker_375e1536dd1dfd9d92e8d86d01736411 = L.marker(
+                [-2.960073689, 37.57078862],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_82811dbf2dc1534af2c02b31e7bb3c76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f750d37884346a9319fde988182abf92 = $(`<div id="html_f750d37884346a9319fde988182abf92" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ilasit <b>County: </b>Kajiado <b>Constituency: <b/>Kajiado South</div>`)[0];
+                popup_82811dbf2dc1534af2c02b31e7bb3c76.setContent(html_f750d37884346a9319fde988182abf92);
+            
+        
+
+        marker_375e1536dd1dfd9d92e8d86d01736411.bindPopup(popup_82811dbf2dc1534af2c02b31e7bb3c76)
+        ;
+
+        
+    
+    
+            var marker_fefe443ee49ac9e492c36635964d6383 = L.marker(
+                [9.027709342, 7.600377628],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d028a025aa4d6b3fd15b142152edd2d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ce3019da159242fc331c1ffbb7e4ae8 = $(`<div id="html_9ce3019da159242fc331c1ffbb7e4ae8" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Ngoigwa <b>County: </b>Kiambu <b>Constituency: <b/>Thika</div>`)[0];
+                popup_d028a025aa4d6b3fd15b142152edd2d6.setContent(html_9ce3019da159242fc331c1ffbb7e4ae8);
+            
+        
+
+        marker_fefe443ee49ac9e492c36635964d6383.bindPopup(popup_d028a025aa4d6b3fd15b142152edd2d6)
+        ;
+
+        
+    
+    
+            var marker_9b9892758747cdd06b601b230e48b116 = L.marker(
+                [-1.069074391, 37.0525549],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_83022bb143f5a53c38996a22c6b8c38a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c54ad454cb1d378b3dc8b25771865851 = $(`<div id="html_c54ad454cb1d378b3dc8b25771865851" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Weithethie <b>County: </b>Kiambu <b>Constituency: <b/>Juja</div>`)[0];
+                popup_83022bb143f5a53c38996a22c6b8c38a.setContent(html_c54ad454cb1d378b3dc8b25771865851);
+            
+        
+
+        marker_9b9892758747cdd06b601b230e48b116.bindPopup(popup_83022bb143f5a53c38996a22c6b8c38a)
+        ;
+
+        
+    
+    
+            var marker_effd15c05e95255a116af207ce2db284 = L.marker(
+                [-0.860233059, 36.95999021],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_4539c7d8243049057365df9da24f0b51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aec03c362216ce7b7526c64dec884fdd = $(`<div id="html_aec03c362216ce7b7526c64dec884fdd" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Gacharage <b>County: </b>Muranga <b>Constituency: <b/>Kandara</div>`)[0];
+                popup_4539c7d8243049057365df9da24f0b51.setContent(html_aec03c362216ce7b7526c64dec884fdd);
+            
+        
+
+        marker_effd15c05e95255a116af207ce2db284.bindPopup(popup_4539c7d8243049057365df9da24f0b51)
+        ;
+
+        
+    
+    
+            var marker_d2c1eb31cba519b54f92537a37105b39 = L.marker(
+                [-0.742585568, 37.19716246],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_22a0c0026f1a20e0e8261c2e9d2fdf31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_382896d8eac165dbe4060c1d208fc1c0 = $(`<div id="html_382896d8eac165dbe4060c1d208fc1c0" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kambirwa <b>County: </b>Muranga <b>Constituency: <b/>Kiharu</div>`)[0];
+                popup_22a0c0026f1a20e0e8261c2e9d2fdf31.setContent(html_382896d8eac165dbe4060c1d208fc1c0);
+            
+        
+
+        marker_d2c1eb31cba519b54f92537a37105b39.bindPopup(popup_22a0c0026f1a20e0e8261c2e9d2fdf31)
+        ;
+
+        
+    
+    
+            var marker_52dd8a9e0b63bb79b36fc17843ec224f = L.marker(
+                [-0.229117539, 37.64820204],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_5c6739896e29a4a5033a09ae0a4aa4d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f686f1fac8a8900ee088cd2b7b35c09 = $(`<div id="html_4f686f1fac8a8900ee088cd2b7b35c09" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Chogoria <b>County: </b>Tharaka Nithi <b>Constituency: <b/>Maara</div>`)[0];
+                popup_5c6739896e29a4a5033a09ae0a4aa4d2.setContent(html_4f686f1fac8a8900ee088cd2b7b35c09);
+            
+        
+
+        marker_52dd8a9e0b63bb79b36fc17843ec224f.bindPopup(popup_5c6739896e29a4a5033a09ae0a4aa4d2)
+        ;
+
+        
+    
+    
+            var marker_ca889fbbb570de600d5968d2cf616191 = L.marker(
+                [-0.157085029, 37.978544],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_12028fb00370e6f2c1f50b00e890b985 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20eb0e58b53c58140cbe91c50b1f0ccd = $(`<div id="html_20eb0e58b53c58140cbe91c50b1f0ccd" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Marimanti <b>County: </b>Tharaka Nithi <b>Constituency: <b/>Tharaka</div>`)[0];
+                popup_12028fb00370e6f2c1f50b00e890b985.setContent(html_20eb0e58b53c58140cbe91c50b1f0ccd);
+            
+        
+
+        marker_ca889fbbb570de600d5968d2cf616191.bindPopup(popup_12028fb00370e6f2c1f50b00e890b985)
+        ;
+
+        
+    
+    
+            var marker_bdbdcc78a7cfa47e0402ecdc47b6c522 = L.marker(
+                [0.633769776, 35.0482938],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_8cc5728fd57f52ba6ccb9f4aa095e1a3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_682e3d3544401499e765e0fc54ba81b5 = $(`<div id="html_682e3d3544401499e765e0fc54ba81b5" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kipkaren <b>County: </b>Uasin gishu <b>Constituency: <b/>Mosop</div>`)[0];
+                popup_8cc5728fd57f52ba6ccb9f4aa095e1a3.setContent(html_682e3d3544401499e765e0fc54ba81b5);
+            
+        
+
+        marker_bdbdcc78a7cfa47e0402ecdc47b6c522.bindPopup(popup_8cc5728fd57f52ba6ccb9f4aa095e1a3)
+        ;
+
+        
+    
+    
+            var marker_26ff0aaf1eb61efd055e25252fe47810 = L.marker(
+                [-0.204050615, 35.34143391],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_cc8babfde9787c204745a263e9442ffe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_caa59999272530ea9cb12acc56a9d827 = $(`<div id="html_caa59999272530ea9cb12acc56a9d827" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Fort Tenan <b>County: </b>Kericho <b>Constituency: <b/>Kipelion West</div>`)[0];
+                popup_cc8babfde9787c204745a263e9442ffe.setContent(html_caa59999272530ea9cb12acc56a9d827);
+            
+        
+
+        marker_26ff0aaf1eb61efd055e25252fe47810.bindPopup(popup_cc8babfde9787c204745a263e9442ffe)
+        ;
+
+        
+    
+    
+            var marker_de55876bc9ea6daffaa66daac3931776 = L.marker(
+                [0.368056, 35.545833],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_69d3d4db4a55f250b23e49b590546429 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_117c746c2ef691615bbf5fd725b4f5c9 = $(`<div id="html_117c746c2ef691615bbf5fd725b4f5c9" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Chepkorio <b>County: </b>Elgeyo Marakwet <b>Constituency: <b/>Keiyo</div>`)[0];
+                popup_69d3d4db4a55f250b23e49b590546429.setContent(html_117c746c2ef691615bbf5fd725b4f5c9);
+            
+        
+
+        marker_de55876bc9ea6daffaa66daac3931776.bindPopup(popup_69d3d4db4a55f250b23e49b590546429)
+        ;
+
+        
+    
+    
+            var marker_9fb946fe25712a29b1f510724249e9a8 = L.marker(
+                [1.161111, 35.493056],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_121d85e0775f674f38a736b44b713602 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f6b8fb84a6862f0bcc57e00ee414d9d = $(`<div id="html_9f6b8fb84a6862f0bcc57e00ee414d9d" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kapyego <b>County: </b>Elgeyo Marakwet <b>Constituency: <b/>Marakwet East</div>`)[0];
+                popup_121d85e0775f674f38a736b44b713602.setContent(html_9f6b8fb84a6862f0bcc57e00ee414d9d);
+            
+        
+
+        marker_9fb946fe25712a29b1f510724249e9a8.bindPopup(popup_121d85e0775f674f38a736b44b713602)
+        ;
+
+        
+    
+    
+            var marker_68f0e364e8a42b2b89d589d9a7f27b19 = L.marker(
+                [0.259722, 36.537778],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_d89c50c31e036d219f442ad7293e7867 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22658b7099d8c3c4cbac0b6a1b64c93e = $(`<div id="html_22658b7099d8c3c4cbac0b6a1b64c93e" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Rumuruti <b>County: </b>Nyandarua <b>Constituency: <b/>Laikipia West</div>`)[0];
+                popup_d89c50c31e036d219f442ad7293e7867.setContent(html_22658b7099d8c3c4cbac0b6a1b64c93e);
+            
+        
+
+        marker_68f0e364e8a42b2b89d589d9a7f27b19.bindPopup(popup_d89c50c31e036d219f442ad7293e7867)
+        ;
+
+        
+    
+    
+            var marker_d9c98a68eab71d3e447c3e2f32cac54c = L.marker(
+                [-0.132222, 36.379722],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_6709310646ea987f40d10fa105b7f902 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_821d54cea5b1a4177a2d9b4cf9c95e2c = $(`<div id="html_821d54cea5b1a4177a2d9b4cf9c95e2c" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Kasuku <b>County: </b>Nyandarua <b>Constituency: <b/>Ol Jorok</div>`)[0];
+                popup_6709310646ea987f40d10fa105b7f902.setContent(html_821d54cea5b1a4177a2d9b4cf9c95e2c);
+            
+        
+
+        marker_d9c98a68eab71d3e447c3e2f32cac54c.bindPopup(popup_6709310646ea987f40d10fa105b7f902)
+        ;
+
+        
+    
+    
+            var marker_103ec4906e6123e809172002cb8d2550 = L.marker(
+                [0.003889, 36.42],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_57cf9e14d36a404b353b709de105c4ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7b8948d3603e547451c0c9f8ff40f15 = $(`<div id="html_a7b8948d3603e547451c0c9f8ff40f15" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mairi Inya <b>County: </b>Nyandarua <b>Constituency: <b/>Ndaragwa</div>`)[0];
+                popup_57cf9e14d36a404b353b709de105c4ac.setContent(html_a7b8948d3603e547451c0c9f8ff40f15);
+            
+        
+
+        marker_103ec4906e6123e809172002cb8d2550.bindPopup(popup_57cf9e14d36a404b353b709de105c4ac)
+        ;
+
+        
+    
+    
+            var marker_50852934746b7ff6d4d5b4ed790ec2ff = L.marker(
+                [-0.068941957, 37.70115559],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_2df2d994e268bc76266106aff1fd6e12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9664e3da9093e9ce0976793319acc6c1 = $(`<div id="html_9664e3da9093e9ce0976793319acc6c1" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mujwa <b>County: </b>Meru <b>Constituency: <b/>Imenti Central</div>`)[0];
+                popup_2df2d994e268bc76266106aff1fd6e12.setContent(html_9664e3da9093e9ce0976793319acc6c1);
+            
+        
+
+        marker_50852934746b7ff6d4d5b4ed790ec2ff.bindPopup(popup_2df2d994e268bc76266106aff1fd6e12)
+        ;
+
+        
+    
+    
+            var marker_5e72b785d667368fdfbae88299f92297 = L.marker(
+                [0.242040145, 37.94095793],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_61478f537e8c204c204c8969b8f2bdf3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8649b42d6ad60f9870661c55c9bd0e0 = $(`<div id="html_a8649b42d6ad60f9870661c55c9bd0e0" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Mulika <b>County: </b>Meru <b>Constituency: <b/>Tigania East</div>`)[0];
+                popup_61478f537e8c204c204c8969b8f2bdf3.setContent(html_a8649b42d6ad60f9870661c55c9bd0e0);
+            
+        
+
+        marker_5e72b785d667368fdfbae88299f92297.bindPopup(popup_61478f537e8c204c204c8969b8f2bdf3)
+        ;
+
+        
+    
+    
+            var marker_a34f371da1198f0032e6fbc42d5f0922 = L.marker(
+                [0.334895827, 37.93741306],
+                {}
+            ).addTo(map_286668f1a79e8c813cc1974d57a0ef56);
+        
+    
+        var popup_1db6fdfaa95a559f89ab4c71c6f61603 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81363cad86dd92dd1582f89c66935276 = $(`<div id="html_81363cad86dd92dd1582f89c66935276" style="width: 100.0%; height: 100.0%;"><b>Market: <b/>Laare <b>County: </b>Meru <b>Constituency: <b/>Igembe North</div>`)[0];
+                popup_1db6fdfaa95a559f89ab4c71c6f61603.setContent(html_81363cad86dd92dd1582f89c66935276);
+            
+        
+
+        marker_a34f371da1198f0032e6fbc42d5f0922.bindPopup(popup_1db6fdfaa95a559f89ab4c71c6f61603)
+        ;
+
+        
+    
+</script>
+</html>
